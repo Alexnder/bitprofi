@@ -82,7 +82,7 @@ personsRoute.post(function(req, res, next) {
   var person;
 
   // HACK to create without id
-  req.body.id = 1 + persons.reduce((prev, p) => Math.max(prev, p.id));
+  req.body.id = 1 + persons.reduce((prev, p) => Math.max(prev, p.id), 0);
 
   try {
     person = new Person(req.body);
