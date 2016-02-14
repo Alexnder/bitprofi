@@ -1,9 +1,11 @@
-# bitprofi
+# Angular with Bootstrap CRUD implementation
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.12.1.
+## Run fake CRUD server
+```
+cd fakecrud && node app.js
+```
 
-## Build & development
+## Run
 
 Run `grunt` for building and `grunt serve` for preview.
 
