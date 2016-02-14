@@ -1,3 +1,22 @@
-<div class="row marketing">
-  <h1>Edit {{person.firstName}} {{person.lastName}}</h1>
-</div>
+<form>
+  <div class="form-group">
+    <label for="personId">Id</label>
+    <input type="text" class="form-control" id="personId" placeholder="Id" value="{{person.id}}">
+  </div>
+  <div class="form-group">
+    <label for="personFirstName">First Name</label>
+    <input type="text" class="form-control" id="personFirstName" placeholder="First Name" value="{{person.firstName}}">
+  </div>
+  <div class="form-group">
+    <label for="personLastName">Last Name</label>
+    <input type="text" class="form-control" id="personLastName" placeholder="Last Name" value="{{person.lastName}}">
+  </div>
+  <div class="form-group">
+    <label for="personComment">Comment</label>
+    <textarea type="text" rows="5" class="form-control" id="personComment" placeholder="Comment" value="{{person.comment}}"></textarea>
+  </div>
+</form>
+<p>
+  <button ng-action="submit" type="submit" class="btn btn-success">Save</button>
+  <a class="btn btn-default" href="#/{{person.id}}" role="button">Cancel</a>
+</p>
