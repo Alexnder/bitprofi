@@ -17,7 +17,7 @@ angular.module('bitprofiApp')
           return;
         }
 
-        $window.location.href = '#/' + $routeParams.id;
+        $window.location.href = '#/' + $routeParams.id + "/view";
       });
     };
   });
