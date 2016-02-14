@@ -1,0 +1,10 @@
+<form ng-submit="submit()" novalidate>
+  <div ng-show="error" class="alert alert-danger" role="alert">{{error}}</div>
+
+  <h2 ng-hide="error">Are you sure to delete {{person.firstName}} {{person.lastName}}?</h2>
+
+  <p>
+    <button ng-hide="error" type="submit" class="btn btn-danger">Delete</button>
+    <a class="btn btn-default" href="#/{{person.id}}/view" role="button">Cancel</a>
+  </p>
+</form>
