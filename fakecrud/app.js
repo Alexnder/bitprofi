@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
-app.use(bodyParser.urlencoded({
+app.use(bodyParser.json({
   extended: true
 }));
 
@@ -80,6 +80,10 @@ app.use(function (req, res, next) {
 // Create
 personsRoute.post(function(req, res, next) {
   var person;
+
+  // HACK to create without id
+  req.body.id = 1 + persons.reduce((prev, p) => Math.max(prev, p.id));
+
   try {
     person = new Person(req.body);
   } catch (e) {
